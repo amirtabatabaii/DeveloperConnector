@@ -33,6 +33,7 @@ router.get('/', passport.authenticate('jwt', {
     Profile.findOne({
             user: req.user.id
         })
+        .populate('user', ['name', 'avatar'])
         .then(profile => {
             if (!profile) {
                 errors.noprofile = 'There is no profile for this user.';

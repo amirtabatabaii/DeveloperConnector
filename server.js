@@ -8,6 +8,7 @@ const profile = require('./routes/api/profile');
 const posts = require('./routes/api/posts');
 
 const app = express();
+const router = express.Router();
 
 //Body parser middleware
 app.use(bodyParser.urlencoded({
@@ -37,6 +38,8 @@ require('./config/passport')(passport);
 app.use('/api/users', users);
 app.use('/api/profile', profile);
 app.use('/api/posts', posts);
+
+app.use('/.netlify/functions/server', router);  // path must route to lambda
 
 const port = process.env.PORT || 5000;
 

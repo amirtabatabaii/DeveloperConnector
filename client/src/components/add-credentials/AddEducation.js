@@ -28,9 +28,7 @@ class AddEducation extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
-      this.setState({
-        errors: nextProps.errors
-      });
+      this.setState({ errors: nextProps.errors });
     }
   }
 
@@ -51,9 +49,7 @@ class AddEducation extends Component {
   }
 
   onChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   onCheck(e) {
@@ -74,13 +70,11 @@ class AddEducation extends Component {
               <Link to="/dashboard" className="btn btn-light">
                 Go Back
               </Link>
-              <h1 className="display-4 text-center"> Add Education </h1>
+              <h1 className="display-4 text-center">Add Education</h1>
               <p className="lead text-center">
                 Add any school, bootcamp, etc that you have attended
               </p>
-              <small className="d-block pb-3 text-danger font-weight-bold">
-                * = required fields
-              </small>
+              <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="* School"
@@ -103,7 +97,7 @@ class AddEducation extends Component {
                   onChange={this.onChange}
                   error={errors.fieldofstudy}
                 />
-                <h6> From Date </h6>
+                <h6>From Date</h6>
                 <TextFieldGroup
                   name="from"
                   type="date"
@@ -111,7 +105,7 @@ class AddEducation extends Component {
                   onChange={this.onChange}
                   error={errors.from}
                 />
-                <h6> To Date </h6>
+                <h6>To Date</h6>
                 <TextFieldGroup
                   name="to"
                   type="date"
@@ -131,7 +125,7 @@ class AddEducation extends Component {
                     id="current"
                   />
                   <label htmlFor="current" className="form-check-label">
-                    Current School
+                    Current Job
                   </label>
                 </div>
                 <TextAreaFieldGroup
@@ -167,6 +161,6 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, {
-  addEducation
-})(withRouter(AddEducation));
+export default connect(mapStateToProps, { addEducation })(
+  withRouter(AddEducation)
+);

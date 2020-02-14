@@ -137,7 +137,7 @@ class CreateProfile extends Component {
             value={this.state.twitter}
             onChange={this.onChange}
             error={errors.twitter}
-          />{" "}
+          />
           <InputGroup
             placeholder="Facebook Page URL"
             name="facebook"
@@ -145,7 +145,7 @@ class CreateProfile extends Component {
             value={this.state.facebook}
             onChange={this.onChange}
             error={errors.facebook}
-          />{" "}
+          />
           <InputGroup
             placeholder="Linkedin Profile URL"
             name="linkedin"
@@ -153,7 +153,7 @@ class CreateProfile extends Component {
             value={this.state.linkedin}
             onChange={this.onChange}
             error={errors.linkedin}
-          />{" "}
+          />
           <InputGroup
             placeholder="YouTube Channel URL"
             name="youtube"
@@ -161,7 +161,7 @@ class CreateProfile extends Component {
             value={this.state.youtube}
             onChange={this.onChange}
             error={errors.youtube}
-          />{" "}
+          />
           <InputGroup
             placeholder="Instagram Page URL"
             name="instagram"
@@ -169,7 +169,7 @@ class CreateProfile extends Component {
             value={this.state.instagram}
             onChange={this.onChange}
             error={errors.instagram}
-          />{" "}
+          />
         </div>
       );
     }
@@ -219,15 +219,13 @@ class CreateProfile extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              {" "}
               <Link to="/dashboard" className="btn btn-light">
-                Go Back{" "}
-              </Link>{" "}
-              <h1 className="display-4 text-center"> Edit Profile </h1>{" "}
+                Go Back
+              </Link>
+              <h1 className="display-4 text-center"> Edit Profile </h1>
               <small className="d-block pb-3 text-danger font-weight-bold">
-                {" "}
-                * = required fields{" "}
-              </small>{" "}
+                * = required fields
+              </small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="* Profile Handle"
@@ -278,7 +276,7 @@ class CreateProfile extends Component {
                   error={errors.skills}
                   info="Please use comma separated values (eg.
       HTML, CSS, JavaScript, PHP "
-                />{" "}
+                />
                 <TextFieldGroup
                   placeholder="Github Username"
                   name="githubusername"
@@ -305,20 +303,20 @@ class CreateProfile extends Component {
                     }}
                     className="btn btn-light"
                   >
-                    Add Social Network Links{" "}
-                  </button>{" "}
-                  <span className="text-muted"> Optional </span>{" "}
-                </div>{" "}
-                {socialInputs}{" "}
+                    Add Social Network Links
+                  </button>
+                  <span className="text-muted"> Optional </span>
+                </div>
+                {socialInputs}
                 <input
                   type="submit"
                   value="Submit"
                   className="btn btn-info btn-block mt-4"
                 />
-              </form>{" "}
-            </div>{" "}
-          </div>{" "}
-        </div>{" "}
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

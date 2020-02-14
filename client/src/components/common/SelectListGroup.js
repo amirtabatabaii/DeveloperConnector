@@ -5,8 +5,7 @@ import PropTypes from "prop-types";
 const SelectListGroup = ({ name, value, error, info, onChange, options }) => {
   const selectOptions = options.map(option => (
     <option key={option.label} value={option.value}>
-      {" "}
-      {option.label}{" "}
+      {option.label}
     </option>
   ));
   return (
@@ -19,10 +18,10 @@ const SelectListGroup = ({ name, value, error, info, onChange, options }) => {
         value={value}
         onChange={onChange}
       >
-        {selectOptions}{" "}
-      </select>{" "}
-      {info && <small className="form-text text-muted"> {info} </small>}{" "}
-      {error && <div className="invalid-feedback"> {error} </div>}{" "}
+        {selectOptions}
+      </select>
+      {info && <small className="form-text text-muted"> {info} </small>}
+      {error && <div className="invalid-feedback"> {error} </div>}
     </div>
   );
 };
